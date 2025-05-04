@@ -1,0 +1,345 @@
+* {
+  font-family: 'Source Sans Pro', sans-serif;
+  text-decoration: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+#burger{
+  display: none; 
+  color: #000;
+}
+#burger-menu{
+  display: none; 
+  color: #000;
+}
+.burger-menu_nav{
+  min-width: 320px;
+}
+.burger-menu{
+  display: none;
+}
+.burger-menu ul li a{
+  color: #000;
+}
+span{
+  color: #fff;
+}
+
+/* Бургер меню*/ 
+@media (max-width: 992px) {
+  header nav {
+    display: none;
+  }
+
+  input, label {
+    display: block;
+  }
+
+  input {
+    position: absolute;
+    top: -100px;
+  }
+
+  label {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 40px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 200;
+  }
+
+  label span {
+    display: block;
+    height: 4px;
+    background: #fff;
+    margin: 6px 0;
+    border-radius: 5px;
+    transition: .3s;
+  }
+
+  input:checked ~ label span:nth-child(1) {
+    transform: rotate(-45deg);
+    top: 10px;
+    position: relative;
+  }
+
+  input:checked ~ label span:nth-child(2) {
+    opacity: 0;
+  }
+
+  input:checked ~ label span:nth-child(3) {
+    transform: rotate(45deg);
+    top: -10px;
+    position: relative;
+  }
+
+  nav.burger_menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 0;
+    background: #202020;
+    overflow: hidden;
+    z-index: 100;
+    transition: height .5s;
+    transition-delay: .3s;
+  }
+
+  input:checked ~ nav.burger-menu {
+    height: 100%;
+    transition-delay: 0s;
+  }
+  
+
+  nav.burger_menu ul {
+    margin: 150px auto;
+    width: 250px;
+    list-style: none;
+  }
+
+  nav.burger_menu li {
+    border-top: 1px solid #ffffff3a;
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  nav.burger_menu li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+  }
+}
+
+.container{
+    width: 1170px;
+    margin: 0 auto;
+}
+  
+.menu{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 45px;
+}
+
+header {
+  background: url(img/bg-header.png) no-repeat center top;
+  background-size: cover;
+  height: auto;
+  padding-bottom: 60px;
+}
+h{
+  font-weight: 900;
+}
+.logo h2 {
+    color: #3e3f45;
+    width: 50px;
+    font-size: 10px;
+    margin: -28px 0 0 100px;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    gap: 10px;
+  }
+.nav {
+    display: flex;
+    justify-content: space-around;
+    width: 450px;
+    list-style: none;
+  }
+
+.nav li:hover {
+  padding-bottom: -5px;
+    border-bottom: 3px solid #008ed6;
+    list-style: none;
+  }
+
+  .section1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px;
+  }
+
+  .section1-text {
+    max-width: 50%;
+  }
+
+  .section1 h1 {
+    margin-bottom: 20px;
+  }
+
+  .section1 p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    color: #ccc;
+  }
+
+
+  .buttons {
+    display: flex;
+    gap: 20px;
+  }
+
+  .btn {
+    width: 160px;
+    height: 50px;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    font-size: 12px;
+    color: #fff;
+    padding-top: 16px;
+    border-radius: 4px;
+    font-weight: 900;
+  }
+
+  .button1 {
+    background-color: #008ed6;
+    color: white;
+    border: none;
+  }
+  .button1:hover{
+    background-color: #0020d6;
+  }
+
+  .button2 {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+  }
+  .button2:hover{
+    background-color: #fff;
+    color: #008ed6;
+  }
+
+  /* Адаптація на мобілках */
+  @media (max-width: 992px) {
+    header {
+      background-position: center center; /* Позиціонуємо фон по центру на екранах середнього розміру */
+    }
+    .container {
+      width: 90%;
+      margin: 0 auto;
+    }
+  
+    .menu {
+      flex-direction: column;
+      align-items: flex-start;
+      padding-top: 20px;
+    }
+  
+    .nav {
+      display: none;
+    }
+  
+    #burger {
+      display: block;
+      position: absolute;
+      top: -9999px;
+    }
+  
+    label[for="burger"] {
+      display: block;
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      width: 40px;
+      height: 26px;
+      cursor: pointer;
+      z-index: 999;
+    }
+  
+    label[for="burger"] span {
+      display: block;
+      height: 4px;
+      background: #fff;
+      margin: 6px 0;
+      border-radius: 5px;
+      transition: 0.3s ease;
+    }
+  
+    #burger:checked + label span:nth-child(1) {
+      transform: rotate(-45deg);
+      position: relative;
+      top: 10px;
+    }
+  
+    #burger:checked + label span:nth-child(2) {
+      opacity: 0;
+    }
+  
+    #burger:checked + label span:nth-child(3) {
+      transform: rotate(45deg);
+      position: relative;
+      top: -10px;
+    }
+  
+    nav.burger-menu {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 0;
+      background: #202020;
+      overflow: hidden;
+      z-index: 100;
+      transition: height 0.4s ease;
+    }
+  
+    #burger:checked ~ nav.burger-menu {
+      height: 100vh;
+    }
+  
+    nav.burger-menu ul {
+      padding-top: 100px;
+      list-style: none;
+      text-align: center;
+    }
+  
+    nav.burger-menu li {
+      margin: 20px 0;
+      border-top: 1px solid #444;
+    }
+  
+    nav.burger-menu li a {
+      color: #fff;
+      font-size: 20px;
+      text-decoration: none;
+      display: block;
+      padding: 10px 0;
+    }
+  
+    .section1 {
+      margin-top: 30px;
+    }
+  
+    .section1-text {
+      max-width: 100%;
+      width: 420px;
+      font-size: 14px;
+    }
+  
+    .section1 h2 {
+      font-size: 24px;
+    }
+  
+    .section1 p {
+      font-size: 16px;
+    }
+
+    .btn {
+      width: 80%;
+      padding-top: 14px;
+      font-size: 14px;
+    }
+  }
