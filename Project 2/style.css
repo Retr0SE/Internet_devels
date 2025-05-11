@@ -365,7 +365,7 @@ header {
 .underline{
   display: flex; 
   gap: 5px;
-  justify-content: center;
+  justify-content: left;
   padding-top: 20px;
 }
 .icons1{
@@ -465,8 +465,9 @@ header {
   align-items: center;
   gap: 15px;
 }
+
 @media (max-width: 768px) {
-  .section3-content {
+  .section3-content .section4-content {
     flex-direction: column;
     text-align: center;
   }
@@ -474,17 +475,21 @@ header {
   .underline {
     justify-content: center;
   }
-
-  .list-item {
-    justify-content: center;
-  }
+  .section4 img .section3 img {
+        padding-top: 30px;
+        max-width: 80%;
+      }
 }
 .section4{
   background-color: #f5f7f9;
 }
-.section4-content{
-  display: flex;
-}
+.section4-content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;  
+      align-items: center;
+      justify-content: center;
+    }
 .section4-text{
   padding-top: 100px;
 }
