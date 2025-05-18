@@ -1,5 +1,5 @@
 * {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   text-decoration: none;
   box-sizing: border-box;
   margin: 0;
@@ -427,9 +427,7 @@ header {
   border: 1.5px solid #008ed6;
   transition: .5s;
 }
-.section2{
-  border-bottom: 1px solid #3e3f45;;
-}
+
 /* Section 3*/
 
 .section3-content {
@@ -438,6 +436,7 @@ header {
   gap: 40px;  
   align-items: center;
   justify-content: center;
+  border-top: 1px solid #3e3f45;
 }
 .section3-content img {
   max-width: 100%;
@@ -482,6 +481,7 @@ header {
 }
 .section4{
   background-color: #f5f7f9;
+  padding-bottom: 50px;
 }
 .section4-content {
       display: flex;
@@ -492,4 +492,166 @@ header {
     }
 .section4-text{
   padding-top: 100px;
+}
+.section5{
+  background: url(img/background_slick.png) no-repeat center top;
+  background-size: cover;
+  padding-bottom: 40px;
+}
+.slide{
+  display: flex;
+  justify-content: center;
+  padding-top: 60px;
+}
+
+.slider-card {
+  width: 48%; /* щоб помістилось 2 картки в один слайд */
+  padding: 20px;
+  border-radius: 8px;
+}
+.slider p{
+  font-style: italic;
+  font-size: 18px;
+}
+.about-author{
+  display: flex;
+  padding-top: 20px;
+}
+.slider h3{
+  margin: 8px 0;
+  font-size: 14px;
+}
+.slider img{
+  padding-right: 10px;
+}
+
+.slick-dots li button:before {
+    display: none !important;
+}
+
+/* Відображаємо лише кастомні крапки */
+.slick-dots li button.custom-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid #3a3537;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    font-size: 0;
+    color: transparent;
+    transition: all 0.3s ease;
+}
+
+
+.slick-dots li.slick-active button.custom-dot {
+    background: #fff;
+}
+.slick-dots li {
+    margin: 0 15px !important; 
+    padding-top: 50px!important;
+}
+.section5-bottom{
+  background-color: #000;  
+}
+
+ .pricing-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+            padding-top: 60px;
+        }
+        
+        .pricing-card {
+            flex: 1;
+            min-width: 250px;
+            max-width: 300px;
+            background: #ffffff;
+            border: 2px solid #e0e0e0;
+            overflow: hidden;
+        }
+        
+        
+        .pricing-title {
+            font-size: 18px;
+            font-weight: 900;
+            color: #000000; 
+
+        }
+
+        
+        .pricing-period {
+            font-size: 12px;
+            color: #b4b4b4;
+        }
+        
+        .pricing-features {
+            color: #b4b4b4;
+            margin: 50px;
+            font-size: 12px;
+        }
+        
+        .pricing-features p {
+           color: #b4b4b4;
+           text-align: center;
+           font-size: 12px;
+        }
+  .pricing-button {
+  background-color: #fff;
+  color: #008fd6;
+  border:2px solid #e0e0e0;
+  display: block;
+  text-align: center;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 5px;
+  margin: 0 2rem 2rem;
+  }
+  .pricing-button:hover{
+    background-color: #008ed6;
+    color: #fff;
+  }
+
+        
+        b {
+            font-weight: 600;
+            color: #008ed6; 
+        }
+
+        @media (max-width: 1200px) {
+            .pricing-card {
+                min-width: 200px;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .pricing-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .pricing-card {
+                max-width: 400px;
+                width: 100%;
+            }
+        }
+.pricing-top{
+  text-align: center;
+  border-bottom:2px solid #e0e0e0 ;
+  width: 100%;
+  padding: 25px 0;
+}
+.pricing-middle{
+  text-align: center;
+  border-bottom:2px solid #e0e0e0 ;
+  padding: 20px 0;
+}
+.pricing-card:hover .pricing-middle {
+  background-color: #008ed6;
+}
+.pricing-card:hover .pricing-title {
+  color: #008ed6;
 }
