@@ -1,14 +1,20 @@
 * {
-  font-family: "Source Sans Pro", sans-serif;
   text-decoration: none;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   color: #fff;
 }
+h2{
+  font-weight: 900!important;
+}
+section,
+header{
+    font-family: "Source Sans Pro", sans-serif !important;
+}
 #burger{
   display: none; 
-  color: #000;
+  color: #000;  
 }
 #burger-menu{
   display: none; 
@@ -115,29 +121,28 @@ span{
   }
 }
 
-.container{
-    width: 1170px;
-    margin: 0 auto;
-}
   
 .menu{
   display: flex;
   justify-content: space-between;
-  padding-top: 45px;
+  padding-top: 10px;
 }
 
 header {
   background: url(img/bg-header.png) no-repeat center top;
   background-size: cover;
-  height: auto;
   padding-bottom: 60px;
+}
+.logo h1{
+  font-weight: 900;
+  font-size: 2em;
 }
   
 .logo h2 {
     color: #3e3f45;
     width: 50px;
-    font-size: 10px;
-    margin: -32px 0 0 100px;
+    font-size: 12px;
+    margin: -38px 0 0 85px;
     font-weight: 900;
   }
 
@@ -146,9 +151,15 @@ header {
     align-items: center;
     padding-left: 58px;
     padding-top: 20px;
-
   }
-.nav {
+  .logo-link:hover{
+    text-decoration: none;
+  }
+
+.logo-link{
+  list-style: none;
+}
+.navigation {
     display: flex;
     justify-content: space-around;
     list-style: none;
@@ -156,15 +167,21 @@ header {
     margin-top: 20px;
     gap: 10px;
   }
-.nav a{
+.navigation a{
   position: relative;
+  color: #fff;
+}
+.navigation a:hover{
+  color: #fff;
+  text-decoration: none;
 }
 
-.nav a::after {
+
+.navigation a::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -10px; /* трохи нижче тексту */
+  bottom: -10px;
   width: 100%;
   height: 2px;
   background-image: url('img/blue_line.png');
@@ -173,7 +190,7 @@ header {
   opacity: 0;
   transition: opacity 0.3s ease;
   }
-  .nav a:hover::after {
+  .navigation a:hover::after {
     opacity: 1;
   }
 
@@ -198,6 +215,7 @@ header {
     font-size: 18px;
     line-height: 1.5;
     margin: 30px 0;
+    padding-right: 10px;
     color: #79797b;
   }
 
@@ -207,7 +225,30 @@ header {
     gap: 20px;
   }
 
-  .btn {
+.button1 {
+  width: 160px;
+  height: 50px;
+  display: flex;             
+  justify-content: center;     
+  align-items: center;       
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 900;
+  color: white;
+  border-radius: 4px;
+  background-color: #008ed6;
+  border: none;
+  transition: background-color 0.5s ease;
+  padding: 0;               
+}
+
+  .button1:hover{
+    background-color: #0020d6;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .button2 {
     width: 160px;
     height: 50px;
     display: block;
@@ -218,31 +259,20 @@ header {
     padding-top: 16px;
     border-radius: 4px;
     font-weight: 900;
-  }
-
-  .button1 {
-    background-color: #008ed6;
-    color: white;
-    border: none;
-  }
-  .button1:hover{
-    background-color: #0020d6;
-  }
-
-  .button2 {
     background-color: transparent;
-    border: 2px solid white;
+    border: 1px solid white;
     color: white;
+    transition: background-color 0.5s ease;
   }
   .button2:hover{
     background-color: #fff;
     color: #008ed6;
+    text-decoration: none;
   }
 
-  /* Адаптація на мобілках */
   @media (max-width: 992px) {
     header {
-      background-position: center center; /* Позиціонуємо фон по центру на екранах середнього розміру */
+      background-position: center center; 
     }
     .container {
       width: 90%;
@@ -255,7 +285,7 @@ header {
       padding-top: 20px;
     }
   
-    .nav {
+    .navigation {
       display: none;
     }
   
@@ -361,6 +391,7 @@ header {
       font-size: 14px;
     }
   }
+
 /* Section2 */
 .underline{
   display: flex; 
@@ -395,7 +426,6 @@ header {
   }
 }
 
-/* Для вузьких мобільних екранів – по 1 в ряд */
 @media (max-width: 600px) {
   .icons-card {
     flex: 0 1 100%;
@@ -429,6 +459,9 @@ header {
 }
 
 /* Section 3*/
+.section3{
+  border-top: 2px solid #ededed;
+}
 
 .section3-content {
   display: flex;
@@ -436,7 +469,6 @@ header {
   gap: 40px;  
   align-items: center;
   justify-content: center;
-  border-top: 1px solid #3e3f45;
 }
 .section3-content img {
   max-width: 100%;
@@ -485,8 +517,7 @@ header {
 }
 .section4-content {
       display: flex;
-      flex-wrap: wrap;
-      gap: 40px;  
+      flex-wrap: wrap;  
       align-items: center;
       justify-content: center;
     }
@@ -505,7 +536,7 @@ header {
 }
 
 .slider-card {
-  width: 48%; /* щоб помістилось 2 картки в один слайд */
+  width: 48%; 
   padding: 20px;
   border-radius: 8px;
 }
@@ -529,12 +560,11 @@ header {
     display: none !important;
 }
 
-/* Відображаємо лише кастомні крапки */
 .slick-dots li button.custom-dot {
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    border: 1px solid #3a3537;
+    border: 1px solid #fff;
     background: transparent;
     cursor: pointer;
     padding: 0;
@@ -555,89 +585,24 @@ header {
   background-color: #000;  
 }
 
- .pricing-container {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-            flex-wrap: wrap;
-            padding-top: 60px;
-        }
-        
-        .pricing-card {
-            flex: 1;
-            min-width: 250px;
-            max-width: 300px;
-            background: #ffffff;
-            border: 2px solid #e0e0e0;
-            overflow: hidden;
-        }
-        
-        
-        .pricing-title {
-            font-size: 18px;
-            font-weight: 900;
-            color: #000000; 
+.pricing-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 60px;
+}
 
-        }
-
-        
-        .pricing-period {
-            font-size: 12px;
-            color: #b4b4b4;
-        }
-        
-        .pricing-features {
-            color: #b4b4b4;
-            margin: 50px;
-            font-size: 12px;
-        }
-        
-        .pricing-features p {
-           color: #b4b4b4;
-           text-align: center;
-           font-size: 12px;
-        }
-  .pricing-button {
-  background-color: #fff;
-  color: #008fd6;
-  border:2px solid #e0e0e0;
-  display: block;
-  text-align: center;
-  padding: 1rem 2rem;
-  text-decoration: none;
-  font-weight: 600;
-  border-radius: 5px;
-  margin: 0 2rem 2rem;
-  }
-  .pricing-button:hover{
-    background-color: #008ed6;
-    color: #fff;
-  }
-
-        
-        b {
-            font-weight: 600;
-            color: #008ed6; 
-        }
-
-        @media (max-width: 1200px) {
-            .pricing-card {
-                min-width: 200px;
-            }
-        }
-
-        @media (max-width: 900px) {
-            .pricing-container {
-                flex-direction: column;
-                align-items: center;
-            }
-            .pricing-card {
-                max-width: 400px;
-                width: 100%;
-            }
-        }
+.pricing-card {
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px;
+  background: #ffffff;
+  border: 2px solid #e0e0e0;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
 .pricing-top{
   text-align: center;
   border-bottom:2px solid #e0e0e0 ;
@@ -648,10 +613,225 @@ header {
   text-align: center;
   border-bottom:2px solid #e0e0e0 ;
   padding: 20px 0;
+  transition: all 0.5s ease;
 }
 .pricing-card:hover .pricing-middle {
   background-color: #008ed6;
 }
 .pricing-card:hover .pricing-title {
+  color: #008ed6;
+}
+.pricing-price p{
+  color: #000;
+}
+.pricing-card:hover .pricing-price p{
+  color: #fff;
+}
+.pricing-card:hover .pricing-price span{
+  color: #fff;
+}
+.pricing-price span{
+  font-size: 25px;
+  vertical-align: top;
+  color: #000;
+  margin-top: 10px;
+  margin-right: 2px;
+}
+.pricing-price {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.pricing-title {
+  font-size: 18px;
+  font-weight: 900;
+  color: #000000;
+}
+
+.pricing-period {
+  font-size: 12px;
+  color: #b4b4b4;
+}
+
+.pricing-features {
+  color: #b4b4b4;
+  margin: 50px;
+  font-size: 12px;
+}
+
+.pricing-features p {
+  color: #b4b4b4;
+  text-align: center;
+  font-size: 12px;
+}
+
+.pricing-button {
+  background-color: #fff;
+  font-size: 12px;
+  text-decoration: none;
+  color: #008fd6;
+  border: 2px solid #e0e0e0;
+  display: block;
+  text-align: center;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  font-weight: 900;
+  border-radius: 5px;
+  margin: 0 2rem 2rem;
+  transition: all 0.5s ease;
+}
+
+.pricing-button:hover {
+  background-color: #008ed6;
+  color: #fff;
+  text-decoration: none;
+}
+
+b {
+  font-weight: 600;
+  color: #008ed6;
+}
+
+@media (max-width: 1200px) {
+  .pricing-card {
+    min-width: 200px;
+  }
+}
+
+@media (max-width: 900px) {
+  .pricing-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .pricing-card {
+    max-width: 400px;
+    width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .pricing-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.info-content {
+  padding-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.info-card{
+  text-align: center;
+}
+.info-paragraph p{
+  font-weight: bold;
+  padding-top: 10px;
+  margin-bottom: -10px;
+}
+/* Section8 */
+.section8 {
+      position: relative;
+      width: 100%;
+      height: 500px;
+    }
+
+.form-overlay {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    z-index: 10;
+  }
+  .form-control,
+textarea.form-control,
+.btn {
+  border-radius: 1px !important;
+}
+.form-overlay button {
+  width: 120px;
+  height: 40px;
+  display: flex;             
+  justify-content: center;     
+  align-items: center;       
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 900;
+  color: white;
+  border-radius: 4px;
+  background-color: #008ed6;
+  border: none;
+  transition: background-color 0.5s ease;
+  padding: 0;
+}
+
+.send-messege textarea {
+  resize: none;
+  height: 500px!important; 
+  width: 100%;
+}
+
+.form-control {
+    background-color: #000;
+    border: 1px solid #79797b;
+    border-radius: 0;
+}
+
+.form-overlay textarea {
+   resize: none;
+   height: 146px!important;
+}
+.form-overlay input, textarea{
+  background-color: #000!important;
+}
+
+
+    @media (max-width: 768px) {
+      .form-overlay .row {
+        flex-direction: column;
+      }
+    }
+
+.map{
+  width: 100%;
+  height: 500px; 
+  padding-top: 30px;
+}
+.map iframe{
+  width: 100%;
+  height: 100%;
+}
+footer{
+  background-color: #000;
+}
+.footer-icons{
+justify-content: center;
+ display: flex;
+ padding-top: 20px;
+ color: #79797b;
+ gap: 18px;
+}
+.footer-icons a{
+  font-size: 24px;
+  margin: 0 10px;
+  color: #79797b;
+  transition: color 0.5s;
+}
+.footer-icons i{
+  color: #79797b;
+  transition: color 0.5s;
+}
+
+i:hover {
   color: #008ed6;
 }
